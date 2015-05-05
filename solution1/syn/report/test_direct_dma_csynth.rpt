@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vivado HLS Report for 'test_direct_dma'
+================================================================
+* Date:           Sat Apr 18 21:58:17 2015
+
+* Version:        2014.1 (build date: Fri Apr 04 13:20:25 PM 2014)
+* Project:        test_direct_dma
+* Solution:       solution1
+* Product family: zynq zynq_fpv6 
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +---------+-------+----------+------------+
+    |  Clock  | Target| Estimated| Uncertainty|
+    +---------+-------+----------+------------+
+    |default  |  10.00|      2.52|        1.25|
+    +---------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 2  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 3  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      0|     77|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    128|
+|Register         |        -|      -|    291|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|    291|    205|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |      1|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_234_p2    |     +    |      0|  0|  32|          32|           1|
+    |ap_sig_bdd_115   |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_155   |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_250   |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_bdd_251   |    and   |      0|  0|   1|           1|           1|
+    |tmp_2_fu_228_p2  |   icmp   |      0|  0|  40|          32|          32|
+    |ap_sig_bdd_148   |    or    |      0|  0|   1|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|  77|          69|          38|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |destinationAddress_in_sig  |  32|          2|   32|         64|
+    |i_reg_158                  |  32|          2|   32|         64|
+    |length_r_in_sig            |  32|          2|   32|         64|
+    |sourceAddress_in_sig       |  32|          2|   32|         64|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 128|          8|  128|        256|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                              |   3|   0|    3|          0|
+    |ap_reg_ioackin_out_stream_V_V_TREADY   |   1|   0|    1|          0|
+    |ap_reg_ioackin_read_mover_V_V_TREADY   |   1|   0|    1|          0|
+    |ap_reg_ioackin_write_mover_V_V_TREADY  |   1|   0|    1|          0|
+    |destinationAddress_ap_vld_preg         |   1|   0|    1|          0|
+    |destinationAddress_assign_fu_74        |  32|   0|   32|          0|
+    |destinationAddress_preg                |  32|   0|   32|          0|
+    |i_reg_158                              |  32|   0|   32|          0|
+    |length_assign_fu_78                    |  32|   0|   32|          0|
+    |length_r_ap_vld_preg                   |   1|   0|    1|          0|
+    |length_r_preg                          |  32|   0|   32|          0|
+    |read_length_reg_264                    |  28|   0|   32|          4|
+    |read_mover_halt_preg                   |   1|   0|    1|          0|
+    |sourceAddress_ap_vld_preg              |   1|   0|    1|          0|
+    |sourceAddress_assign_fu_70             |  32|   0|   32|          0|
+    |sourceAddress_preg                     |  32|   0|   32|          0|
+    |tmp_reg_258                            |  28|   0|   28|          0|
+    |write_mover_halt_preg                  |   1|   0|    1|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  | 291|   0|  295|          4|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+---------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++---------------------------+-----+-----+------------+---------------------------+--------------+
+|s_axi_AXILiteS_AWVALID     |  in |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_AWREADY     | out |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_AWADDR      |  in |    6|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_WVALID      |  in |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_WREADY      | out |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_WDATA       |  in |   32|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_WSTRB       |  in |    4|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_ARVALID     |  in |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_ARREADY     | out |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_ARADDR      |  in |    6|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_RVALID      | out |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_RREADY      |  in |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_RDATA       | out |   32|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_RRESP       | out |    2|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_BVALID      | out |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_BREADY      |  in |    1|    s_axi   |          AXILiteS         |    scalar    |
+|s_axi_AXILiteS_BRESP       | out |    2|    s_axi   |          AXILiteS         |    scalar    |
+|ap_clk                     |  in |    1| ap_ctrl_hs |      test_direct_dma      | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |      test_direct_dma      | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |      test_direct_dma      | return value |
+|read_mover_V_V_TDATA       | out |   72|    axis    |       read_mover_V_V      |    pointer   |
+|read_mover_V_V_TVALID      | out |    1|    axis    |       read_mover_V_V      |    pointer   |
+|read_mover_V_V_TREADY      |  in |    1|    axis    |       read_mover_V_V      |    pointer   |
+|write_mover_V_V_TDATA      | out |   72|    axis    |      write_mover_V_V      |    pointer   |
+|write_mover_V_V_TVALID     | out |    1|    axis    |      write_mover_V_V      |    pointer   |
+|write_mover_V_V_TREADY     |  in |    1|    axis    |      write_mover_V_V      |    pointer   |
+|in_stream_V_V_TDATA        |  in |  128|    axis    |       in_stream_V_V       |    pointer   |
+|in_stream_V_V_TVALID       |  in |    1|    axis    |       in_stream_V_V       |    pointer   |
+|in_stream_V_V_TREADY       | out |    1|    axis    |       in_stream_V_V       |    pointer   |
+|out_stream_V_V_TDATA       | out |  128|    axis    |       out_stream_V_V      |    pointer   |
+|out_stream_V_V_TVALID      | out |    1|    axis    |       out_stream_V_V      |    pointer   |
+|out_stream_V_V_TREADY      |  in |    1|    axis    |       out_stream_V_V      |    pointer   |
+|read_mover_halt            | out |    1|   ap_none  |      read_mover_halt      |    pointer   |
+|read_mover_halt_complete   |  in |    1|   ap_none  |  read_mover_halt_complete |    pointer   |
+|write_mover_halt           | out |    1|   ap_none  |      write_mover_halt     |    pointer   |
+|write_mover_halt_complete  |  in |    1|   ap_none  | write_mover_halt_complete |    pointer   |
++---------------------------+-----+-----+------------+---------------------------+--------------+
+

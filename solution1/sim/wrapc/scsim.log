@@ -1,0 +1,5 @@
+   Build using "/Xilinx/Vivado_HLS/2014.1/lnx64/tools/gcc/bin/g++"
+   Compiling test_direct_dma_testbench.cpp_pre.cpp.tb.cpp
+   Compiling test_direct_dma.cpp_pre.cpp.tb.cpp
+   Compiling apatb_test_direct_dma.cpp
+Makefile.rules:283: recipe for target 'obj/apatb_test_direct_dma.o' failed

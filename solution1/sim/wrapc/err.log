@@ -1,0 +1,73 @@
+apatb_test_direct_dma.cpp: In function ‘bool test_direct_dma(hls::stream<unsigned int>*, hls::stream<unsigned int>*, volatile unsigned int*, volatile unsigned int*, unsigned int, unsigned int)’:
+apatb_test_direct_dma.cpp:120:22: error: ‘WRAPC_STREAM_SIZE_OUT_out_stream_V’ was not declared in this scope
+apatb_test_direct_dma.cpp:234:108: error: no match for ‘operator=’ in ‘* out_stream = sc_dt::sc_bv<32>((*(const sc_dt::sc_proxy<sc_dt::sc_subref_r<sc_dt::sc_bv_base> >*)(& sc_dt::sc_proxy<X>::range(int, int) [with X = sc_dt::sc_bv_base](31, 0).sc_dt::sc_subref<sc_dt::sc_bv_base>::<anonymous>.sc_dt::sc_subref_r<sc_dt::sc_bv_base>::<anonymous>))).sc_dt::sc_bv<32>::<anonymous>.sc_dt::sc_bv_base::<anonymous>.sc_dt::sc_proxy<X>::to_uint64 [with X = sc_dt::sc_bv_base, sc_dt::uint64 = long long unsigned int]()’
+apatb_test_direct_dma.cpp:234:108: note: candidate is:
+/Xilinx/Vivado_HLS/2014.1/include/hls_stream.h:211:13: note: hls::stream<__STREAM_T__>& hls::stream<__STREAM_T__>::operator=(const hls::stream<__STREAM_T__>&) [with __STREAM_T__ = unsigned int, hls::stream<__STREAM_T__> = hls::stream<unsigned int>]
+/Xilinx/Vivado_HLS/2014.1/include/hls_stream.h:211:13: note:   no known conversion for argument 1 from ‘sc_dt::uint64 {aka long long unsigned int}’ to ‘const hls::stream<unsigned int>&’
+apatb_test_direct_dma.cpp:531:83: error: no match for ‘operator=’ in ‘sc_dt::sc_proxy<X>::range(int, int) [with X = sc_dt::sc_bv_base](31, 0) = * out_stream’
+apatb_test_direct_dma.cpp:531:83: note: candidates are:
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:985:19: note: template<class Y> sc_dt::sc_subref& sc_dt::sc_subref::operator=(const sc_dt::sc_proxy<Y>&) [with Y = Y, X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1322:1: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_subref_r<X>&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1322:1: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_subref_r<sc_dt::sc_bv_base>&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1341:1: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_subref<X>&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1341:1: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_subref<sc_dt::sc_bv_base>&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:991:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const char*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:991:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const char*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:994:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const bool*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:994:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const bool*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:997:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_logic*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:997:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_logic*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1000:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_unsigned&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1000:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_unsigned&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1003:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_signed&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1003:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_signed&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1006:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_uint_base&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1006:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_uint_base&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1009:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_int_base&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1009:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_int_base&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1012:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(long unsigned int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1012:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1015:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(long int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1015:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1018:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(unsigned int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1018:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1021:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1021:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1024:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(sc_dt::uint64) [with X = sc_dt::sc_bv_base, sc_dt::uint64 = long long unsigned int]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1024:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long long unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1027:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(sc_dt::int64) [with X = sc_dt::sc_bv_base, sc_dt::int64 = long long int]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1027:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long long int’
+apatb_test_direct_dma.cpp:661:84: error: no match for ‘operator=’ in ‘sc_dt::sc_proxy<X>::range(int, int) [with X = sc_dt::sc_bv_base](31, 0) = * out_stream’
+apatb_test_direct_dma.cpp:661:84: note: candidates are:
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:985:19: note: template<class Y> sc_dt::sc_subref& sc_dt::sc_subref::operator=(const sc_dt::sc_proxy<Y>&) [with Y = Y, X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1322:1: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_subref_r<X>&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1322:1: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_subref_r<sc_dt::sc_bv_base>&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1341:1: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_subref<X>&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_lv_base.h:1341:1: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_subref<sc_dt::sc_bv_base>&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:991:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const char*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:991:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const char*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:994:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const bool*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:994:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const bool*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:997:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_logic*) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:997:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_logic*’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1000:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_unsigned&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1000:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_unsigned&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1003:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_signed&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1003:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_signed&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1006:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_uint_base&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1006:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_uint_base&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1009:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(const sc_dt::sc_int_base&) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1009:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘const sc_dt::sc_int_base&’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1012:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(long unsigned int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1012:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1015:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(long int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1015:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1018:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(unsigned int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1018:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1021:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(int) [with X = sc_dt::sc_bv_base]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1021:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1024:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(sc_dt::uint64) [with X = sc_dt::sc_bv_base, sc_dt::uint64 = long long unsigned int]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1024:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long long unsigned int’
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1027:19: note: sc_dt::sc_subref<X>& sc_dt::sc_subref<X>::operator=(sc_dt::int64) [with X = sc_dt::sc_bv_base, sc_dt::int64 = long long int]
+/Xilinx/Vivado_HLS/2014.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_bit_proxies.h:1027:19: note:   no known conversion for argument 1 from ‘hls::stream<unsigned int>’ to ‘long long int’
+make: *** [obj/apatb_test_direct_dma.o] Error 1

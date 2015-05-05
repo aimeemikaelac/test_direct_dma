@@ -1,0 +1,2 @@
+test_direct_dma_AXILiteS_s_axi
+test_direct_dma

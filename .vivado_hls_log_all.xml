@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Port 'write_mover_halt' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="test_direct_dma" solutionName="solution1" date="2015-04-18T21:58:17.383-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'read_mover_halt' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="test_direct_dma" solutionName="solution1" date="2015-04-18T21:58:17.379-0600" type="Warning"/>
+        <logs message="@W [RTGEN-101] Legalizing port name 'test_direct_dma/length' to 'test_direct_dma/length_r'." projectName="test_direct_dma" solutionName="solution1" date="2015-04-18T21:58:17.304-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

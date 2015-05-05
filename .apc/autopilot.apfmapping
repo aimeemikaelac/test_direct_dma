@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="test_direct_dma.cpp" path="/D/xilinx_workspace/test_direct_dma/source/test_direct_dma.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_direct_dma_testbench.cpp" path="/D/xilinx_workspace/test_direct_dma/source/test_direct_dma_testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
